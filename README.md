@@ -1,4 +1,125 @@
 # JARKOM-MODUL-1-D18-2023
+## Abhinaya Radiansyah Listiyanto  (5025211173)
+## Fauzi Rizki Pratama			       (5025211220)
+
+
+
+## 1. User melakukan berbagai aktivitas dengan menggunakan protokol FTP. Salah satunya adalah mengunggah suatu file.
+## a.) Berapakah sequence number (raw) pada packet yang menunjukkan aktivitas tersebut?
+
+#### Penjelasan :
+Query kan dulu dengan “ftp” untuk memfilter semua paket yang berisi FTP
+Pada bagian info kita cari “STOR” karena itu kode bagian paket sedang aktivitas mengunggah file
+Klik paket tersebut dan cari pada bagian Header “Sequence number (raw)”
+
+#### Jawaban: 258040667
+![Screenshot 2023-09-18 205335](https://github.com/fauziriizkii/JARKOM-MODUL-1-D18-2023/assets/114990549/35e80962-ec6b-43db-ad55-127cc88e0009)
+
+#### Kendala: Tidak ada kendala yang dialami.
+
+## b.) Berapakah acknowledge number (raw) pada packet yang menunjukkan aktivitas tersebut?
+
+#### Penjelasan :
+Query kan dulu dengan “ftp” untuk memfilter semua paket yang berisi FTP
+Pada bagian info kita cari “STOR” karena itu kode bagian paket sedang aktivitas mengunggah file
+Klik paket tersebut dan cari pada bagian Header “Acknowledgment Number (raw)”
+
+#### Jawaban: 1044861039
+![Screenshot 2023-09-18 205335](https://github.com/fauziriizkii/JARKOM-MODUL-1-D18-2023/assets/114990549/1c9819fa-4172-4360-982f-2032b6a8b90d)
+
+#### Kendala: Tidak ada kendala yang dialami
+
+## c.) Berapakah sequence number (raw) pada packet yang menunjukkan response dari aktivitas tersebut?
+
+#### Penjelasan:
+Query kan dulu dengan “ftp” untuk memfilter semua paket yang berisi FTP
+Pada bagian info kita cari “nama file yang sama ketika diunggah” karena itu bagian paket respon yang sedang aktivitas mengunggah file
+Klik paket tersebut dan cari pada bagian Header “Sequence number (raw)”
+
+#### Jawaban: 1044861039
+![Screenshot 2023-09-18 205913](https://github.com/fauziriizkii/JARKOM-MODUL-1-D18-2023/assets/114990549/a3898dd7-500b-48c7-86b0-54a8f5d2df99)
+
+#### Kendala: Tidak ada kendala yang dialami
+
+## d.) Berapakah acknowledge number (raw) pada packet yang menunjukkan response dari aktivitas tersebut?
+
+#### Penjelasan:
+Query kan dulu dengan “ftp” untuk memfilter semua paket yang berisi FTP
+Pada bagian info kita cari “nama file yang sama ketika diunggah” karena itu bagian paket respon yang sedang aktivitas mengunggah file
+Klik paket tersebut dan cari pada bagian Header “Acknowledgment Number (raw)”
+
+#### Jawaban: 258040696
+![Screenshot 2023-09-18 205913](https://github.com/fauziriizkii/JARKOM-MODUL-1-D18-2023/assets/114990549/340d7167-15ca-4339-ba92-b4d0442e45af)
+
+#### Kendala: Tidak ada kendala yang dialami
+
+
+
+## 2. Sebutkan web server yang digunakan pada portal praktikum Jaringan Komputer!
+
+#### Penjelasan:
+Query pertama pada filter dituliskan “http” untuk memfilter semua paket yang berisi http
+pada bagian info kita cari HTTP GET karena biasanya itu untuk akses masuk ke sebuah web
+pada Header paket tinggal kita cari nama Servernya
+
+#### Jawaban: gunicorn
+![Screenshot 2023-09-18 210731](https://github.com/fauziriizkii/JARKOM-MODUL-1-D18-2023/assets/114990549/58b57bac-6122-40af-9ccc-945a307ff64b)
+![Screenshot 2023-09-18 220010](https://github.com/fauziriizkii/JARKOM-MODUL-1-D18-2023/assets/114990549/646f0697-edf0-4104-a75a-9d13de7dd8aa)
+
+#### Kendala: Tidak ada kendala yang dialami
+
+
+
+## 3. Dapin sedang belajar analisis jaringan. Bantulah Dapin untuk mengerjakan soal berikut:
+## a.) Berapa banyak paket yang tercapture dengan IP source maupun destination address adalah 239.255.255.250 dengan port 3702?
+
+#### Penjelasan:
+Query kan dengan “ip.addr == 239.255.250 && udp.port == 3702” ini menjelaskan untuk mencari ip addres sekian dan memiliki port sekian
+setelah itu kita hitung saja semua paket yang muncul dari atas sampai bawah
+
+#### Jawaban: 21
+![Screenshot 2023-09-18 211606](https://github.com/fauziriizkii/JARKOM-MODUL-1-D18-2023/assets/114990549/d01de255-00df-4daf-9276-cc479d41c3ae)
+
+#### Kendala: Tidak ada kendala yang dialami
+
+## b.) Protokol layer transport apa yang digunakan?
+
+#### Penjelasan:
+Pada info protocol bisa dilihat nsms protocol lsyernya
+Atau kita klik salah satu paket saja dan pada header paket kita lihat nama Protokolnya
+
+#### Jawaban: UDP
+![Screenshot 2023-09-18 211606](https://github.com/fauziriizkii/JARKOM-MODUL-1-D18-2023/assets/114990549/03828d73-e174-4482-b1ea-9728706df728)
+![Screenshot 2023-09-18 220039](https://github.com/fauziriizkii/JARKOM-MODUL-1-D18-2023/assets/114990549/6ef99296-fb3a-44fc-b23d-898a526ccd32)
+
+#### Kendala: Tidak ada kendala yang dialami
+
+
+
+## 4. Berapa nilai checksum yang didapat dari header pada paket nomor 130?
+
+#### Penjelasan:
+Klik paket no 130 dan kita buka saja heaternya
+Maka akan muncul nilai checksumnya
+
+#### Jawaban: 0x18e5
+![Screenshot 2023-09-18 220528](https://github.com/fauziriizkii/JARKOM-MODUL-1-D18-2023/assets/114990549/1d095a86-ac36-411f-b673-7cf68e579ace)
+![Screenshot 2023-09-18 220541](https://github.com/fauziriizkii/JARKOM-MODUL-1-D18-2023/assets/114990549/229166ad-015e-4d92-8b12-8943e00c2b13)
+
+#### Kendala: Terkendala karena bingung antara checksum header dengan checsum biasa dan menuliskan angkanya
+
+
+
+## 5. Elshe menemukan suatu file packet capture yang menarik. Bantulah Elshe untuk menganalisis file packet capture tersebut.
+
+#### Kendala: Belum bisa menemukan password dalam paket
+
+
+
+## 6. Seorang anak bernama Udin Berteman dengan SlameT yang merupakan seorang penggemar film detektif. sebagai teman yang baik, Ia selalu mengajak slamet untuk bermain valoranT bersama. suatu malam, terjadi sebuah hal yang tak terdUga. ketika udin mereka membuka game tersebut, laptop udin menunjukkan sebuah field text dan Sebuah kode Invalid bertuliskan "server SOURCE ADDRESS 7812 is invalid". ketika ditelusuri di google, hasil pencarian hanya menampilkan a1 e5 u21. jiwa detektif slamet pun bergejolak. bantulah udin dan slamet untuk menemukan solusi kode error tersebut.
+
+#### Kendala: Belum bisa memecahkan kode tersebut
+
 
 
 ## 7. Berapa jumlah packet yang menuju IP 184.87.193.88?
@@ -15,6 +136,7 @@ Dan dengan itu saya mendapatkan flag dan diinputkan ke dalam web tersebut.
 <img width="602" alt="Screen Shot 2023-09-22 at 16 20 22" src="https://github.com/fauziriizkii/JARKOM-MODUL-1-D18-2023/assets/114478450/a38cf914-cad6-475b-8088-7febe8ead951">
 
 ##### Kendala: Selama pengerjaan, tida ada kendala yang dialami.
+![Screenshot 2023-09-18 210731](https://github.com/fauziriizkii/JARKOM-MODUL-1-D18-2023/assets/114990549/b7cf272b-500f-4c00-b097-9df7a1334fd8)
 
 
 
